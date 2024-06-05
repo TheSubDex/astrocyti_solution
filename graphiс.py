@@ -14,3 +14,13 @@ def graphic_save_and_show(max_intensities_in_area, z):
     plt.savefig(f'intensity_max_plot{z}.png', bbox_inches='tight')
     plt.savefig(f'intensity_max_plot{z}.svg', bbox_inches='tight')
     plt.show()
+
+    """
+    def graphic_save_and_show(max_intensities_in_area, z):
+    
+    Сохраняет и отображает график максимальной интенсивности во времени.
+
+    Аргументы:
+        max_intensities_in_area (list): Список максимальных интенсивностей.
+        z (int): Идентификатор для имени файлов графиков.
+    """
