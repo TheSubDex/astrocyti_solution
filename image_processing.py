@@ -86,3 +86,59 @@ def max_intensities_in_biggest_area_from_all_images(pixel_coordinates_all_images
         max_intensities.append(max_intensity)
 
     return max_intensities
+
+def read_images_from_folders(folders):
+    """
+    Читает изображения из предоставленных папок и заполняет DataFrame.
+
+    Аргументы:
+        folders (list): Список путей к папкам.
+
+    Возвращает:
+        pd.DataFrame: DataFrame, содержащий данные об изображениях.
+    """
+
+def max_intensity_matrix_for_pixels(df):
+    """
+    Рассчитывает максимальную матрицу интенсивности для пикселей из DataFrame.
+
+    Аргументы:
+        df (pd.DataFrame): DataFrame, содержащий данные об изображениях.
+
+    Возвращает:
+        np.array: Максимальная матрица интенсивности для пикселей.
+    """
+
+def find_largest_white_area(image):
+    """
+    Находит самую большую белую область на предоставленном изображении.
+
+    Аргументы:
+        image (np.array): Изображение для анализа.
+
+    Возвращает:
+        list: Список координат пикселей в самой большой белой области.
+    """
+
+def find_largest_white_area_from_all_images(df):
+    """
+    Находит самую большую белую область на всех изображениях в DataFrame.
+
+    Аргументы:
+        df (pd.DataFrame): DataFrame, содержащий данные об изображениях.
+
+    Возвращает:
+        list: Список координат пикселей со всех изображений.
+    """
+
+def max_intensities_in_biggest_area_from_all_images(pixel_coordinates_all_images, df):
+    """
+    Рассчитывает максимальную интенсивность в самой большой области со всех изображений.
+
+    Аргументы:
+        pixel_coordinates_all_images (list): Список координат пикселей.
+        df (pd.DataFrame): DataFrame, содержащий данные об изображениях.
+
+    Возвращает:
+        list: Список максимальных интенсивностей на всех изображениях.
+    """
