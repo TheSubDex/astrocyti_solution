@@ -13,3 +13,11 @@ def final_func():
 
 if __name__ == "__main__":
     final_func()
+
+# main_module.py
+"""
+def final_func():
+
+    Выполняет всю обработку изображений используя все остальные модули
+
+"""
