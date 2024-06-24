@@ -5,6 +5,15 @@ from natsort import natsorted
 import numpy as np
 
 def read_images_from_folders(main_folder):
+    """
+    Считывает изображения из папок 'images' и 'events' в основной папке.
+
+    Аргументы:
+    main_folder (str): Путь к основной папке.
+
+    Возвращает:
+    pandas.DataFrame: DataFrame с информацией об изображениях.
+    """
     data = []
     images_folder = os.path.join(main_folder, 'images')
     events_folder = os.path.join(main_folder, 'events')
@@ -28,6 +37,15 @@ def read_images_from_folders(main_folder):
     return images_df
 
 def max_intensity_matrix_for_pixels(images_df):
+    """
+    Находит матрицу максимальной интенсивности для пикселей изображений.
+
+    Аргументы:
+    images_df (pandas.DataFrame): DataFrame с информацией об изображениях.
+
+    Возвращает:
+    numpy.ndarray: Матрица максимальной интенсивности.
+    """
     max_intensity_matrix = None
 
     for index, row in images_df[images_df['dataset'] == 'images'].iterrows():
@@ -38,6 +56,15 @@ def max_intensity_matrix_for_pixels(images_df):
     return max_intensity_matrix
 
 def find_largest_white_area(image):
+    """
+    Находит контуры самой большой области активности на изображении.
+
+    Аргументы:
+    image (numpy.ndarray): Входное изображение.
+
+    Возвращает:
+    list: Координаты пикселей контура.
+    """
     contours, _ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     largest_area = 0
     largest_area_contour = None
@@ -58,6 +85,15 @@ def find_largest_white_area(image):
     return pixel_coordinates
 
 def find_largest_white_area_from_all_images(images_df):
+    """
+    Находит контуры самой большой области активности на всех изображениях.
+
+    Аргументы:
+    images_df (pandas.DataFrame): DataFrame с информацией об изображениях.
+
+    Возвращает:
+    list: Координаты пикселей контура для каждого изображения.
+    """
     pixel_coordinates_all_images = []
 
     for image_number, row in images_df[images_df['dataset'] == 'events'].iterrows():
@@ -68,6 +104,16 @@ def find_largest_white_area_from_all_images(images_df):
     return pixel_coordinates_all_images
 
 def max_intensities_in_biggest_area_from_all_images(pixel_coordinates_all_images, images_df):
+    """
+    Находит максимальную интенсивность в самой большой области активности на изображениях.
+
+    Аргументы:
+    pixel_coordinates_all_images (list): Координаты пикселей контура для каждого изображения.
+    images_df (pandas.DataFrame): DataFrame с информацией об изображениях.
+
+    Возвращает:
+    list: Максимальные интенсивности.
+    """
     max_intensities = []
 
     for index, row in images_df[images_df['dataset'] == 'images'].iterrows():

@@ -3,6 +3,15 @@ import ImageProcessing
 import DataCreatingAndSaving
 
 def final_func(main_folder_path):
+    """
+    Основная функция для обработки изображений.
+
+    Аргументы:
+    main_folder_path (str): Путь к основной папке.
+
+    Возвращает:
+    None
+    """
     subfolders_list = FolderUtils.read_subfolders(main_folder_path)
     x = 0
 
