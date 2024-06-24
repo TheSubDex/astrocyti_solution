@@ -26,12 +26,15 @@ Python 3.8 и выше.
  
  [ 85  85  86 ... 113 113 113]]
  А по ней построить изображение:
+ 
 ![изображение](https://github.com/TheSubDex/astrocyti_solution/assets/74463256/02f3d5ff-5e94-42df-9eda-90a2127c6e59)
 
 Или построить график:
+
 ![изображение](https://github.com/TheSubDex/astrocyti_solution/assets/74463256/97e9a933-c6f2-43ea-a0e2-e1fb0c75a6f5)
 
 А к нему выдать данные в виде таблицы эксель:
+
 ![изображение](https://github.com/TheSubDex/astrocyti_solution/assets/74463256/a13b8e44-981e-4dc7-b917-9ab86f943f01)
 
 # Куда что сохраняется?
